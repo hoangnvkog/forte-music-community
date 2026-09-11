@@ -5,12 +5,14 @@ export default function EventsPage() {
     <section className="py-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <h2 className="mb-8 text-3xl font-bold text-gray-900">
-          Sự kiện</h2>
+          Events
+        </h2>
         <div className="space-y-8">
           {/* Upcoming Events */}
           <div>
             <h3 className="mb-4 text-xl font-semibold text-gray-900">
-              Sự kiện sắp tới</h3>
+              Upcoming Events
+            </h3>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               <EventCard isUpcoming={true} />
               <EventCard isUpcoming={true} />
@@ -20,7 +22,8 @@ export default function EventsPage() {
           {/* Past Events */}
           <div>
             <h3 className="mb-4 text-xl font-semibold text-gray-900">
-              Sự kiện đã qua</h3>
+              Past Events
+            </h3>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               <EventCard isUpcoming={false} />
               <EventCard isUpcoming={false} />

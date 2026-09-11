@@ -49,22 +49,24 @@ export default function MemberDetailPage({ params }: { params: { slug: string } 
 
           {/* Bio */}
           <div className="text-left">
-            <h2 className="mb-4 text-xl font-semibold text-gray-900">Về tôi</h2>
+            <h2 className="mb-4 text-xl font-semibold text-gray-900">About Me</h2>
             <p className="text-gray-600">{member.bio}</p>
           </div>
 
           {/* Interests */}
           <div className="text-left">
-            <h2 className="mb-4 text-xl font-semibold text-gray-900">Sở thích</h2>
+            <h2 className="mb-4 text-xl font-semibold text-gray-900">Interests</h2>
             <div className="grid gap-4 sm:grid-cols-2">
               <div>
                 <h3 className="mb-2 text-lg font-medium text-gray-900">
-                  Nhà izd yêu thích</h3>
+                  Favorite Artists
+                </h3>
                 <p className="text-gray-600">{member.favoriteArtists}</p>
               </div>
               <div>
                 <h3 className="mb-2 text-lg font-medium text-gray-900">
-                  Thể loại yêu thích</h3>
+                  Favorite Genres
+                </h3>
                 <p className="text-gray-600">{member.favoriteGenres}</p>
               </div>
             </div>
@@ -76,17 +78,20 @@ export default function MemberDetailPage({ params }: { params: { slug: string } 
               href={member.instagramUrl}
               className="text-gray-600 hover:text-gray-900 transition-colors"
             >
-              Instagram</a>
+              Instagram
+            </a>
             <a
               href={member.facebookUrl}
               className="text-gray-600 hover:text-gray-900 transition-colors"
             >
-              Facebook</a>
+              Facebook
+            </a>
             <a
               href={member.youtubeUrl}
               className="text-gray-600 hover:text-gray-900 transition-colors"
             >
-              YouTube</a>
+              YouTube
+            </a>
           </div>
 
           {/* Back to Members Link */}

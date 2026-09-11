@@ -12,7 +12,8 @@ export default function AboutPage() {
         <div className="space-y-12">
           <div>
             <h2 className="mb-4 text-xl font-semibold text-gray-900">
-              Câu chuyện của chúng tôi</h2>
+              Our Story
+            </h2>
             <p className="text-gray-600">
               Forte Music Community started as a small gathering of piano enthusiasts
               who wanted to share their love for music with others. Over time, we&apos;ve
@@ -23,11 +24,13 @@ export default function AboutPage() {
 
           <div>
             <h2 className="mb-4 text-xl font-semibold text-gray-900">
-              Chúng tôi làm gì</h2>
+              What We Do
+            </h2>
             <div className="grid gap-6 sm:grid-cols-2">
               <div>
                 <h3 className="mb-2 text-lg font-medium text-gray-900">
-                  Buổi họp Piano</h3>
+                  Piano Gatherings
+                </h3>
                 <p className="text-gray-600">
                   Regular meetups where members play piano, share pieces, and enjoy
                   music together.
@@ -35,7 +38,8 @@ export default function AboutPage() {
               </div>
               <div>
                 <h3 className="mb-2 text-lg font-medium text-gray-900">
-                  Buổi chia sẻ âm nhạc</h3>
+                  Music Sharing Sessions
+                </h3>
                 <p className="text-gray-600">
                   Informal gatherings to listen to and discuss piano music and
                   performances.
@@ -43,7 +47,8 @@ export default function AboutPage() {
               </div>
               <div>
                 <h3 className="mb-2 text-lg font-medium text-gray-900">
-                  Workshop</h3>
+                  Workshops
+                </h3>
                 <p className="text-gray-600">
                   Educational sessions on piano technique, music theory, and
                   performance practice.
@@ -51,14 +56,16 @@ export default function AboutPage() {
               </div>
               <div>
                 <h3 className="mb-2 text-lg font-medium text-gray-900">
-                  Bàn biểu diễn cộng đồng</h3>
+                  Community Performances
+                </h3>
                 <p className="text-gray-600">
                   Opportunities for members to perform in a supportive environment.
                 </p>
               </div>
               <div>
                 <h3 className="mb-2 text-lg font-medium text-gray-900">
-                  Buổi gặp gỡ</h3>
+                  Meetups
+                </h3>
                 <p className="text-gray-600">
                   Social events to build connections and friendships through music.
                 </p>
@@ -68,25 +75,29 @@ export default function AboutPage() {
 
           <div>
             <h2 className="mb-4 text-xl font-semibold text-gray-900">
-              Giá trị của chúng tôi</h2>
+              Our Values
+            </h2>
             <div className="grid gap-4 sm:grid-cols-2">
               <div>
                 <h3 className="mb-2 text-lg font-medium text-gray-900">
-                  Yêu âm nhạc</h3>
+                  Love Music
+                </h3>
                 <p className="text-gray-600">
                   We share a deep appreciation for piano music and the joy it brings.
                 </p>
               </div>
               <div>
                 <h3 className="mb-2 text-lg font-medium text-gray-900">
-                  Chia sẻ kiến thức</h3>
+                  Share Knowledge
+                </h3>
                 <p className="text-gray-600">
                   We believe in learning from each other and growing together.
                 </p>
               </div>
               <div>
                 <h3 className="mb-2 text-lg font-medium text-gray-900">
-                  Khuyến khích lẫn nhau</h3>
+                  Encourage One Another
+                </h3>
                 <p className="text-gray-600">
                   We create a supportive environment where everyone feels welcome
                   to share their musical journey.
@@ -94,7 +105,8 @@ export default function AboutPage() {
               </div>
               <div>
                 <h3 className="mb-2 text-lg font-medium text-gray-900">
-                  Tạo ra những kết nối có ý nghĩa</h3>
+                  Create Meaningful Connections
+                </h3>
                 <p className="text-gray-600">
                   We foster lasting friendships and connections through our shared
                   passion for music.

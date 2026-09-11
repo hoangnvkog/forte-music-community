@@ -13,32 +13,40 @@ export default function Header() {
           </div>
           <nav className="hidden md:flex space-x-8">
             <Link href="/" className="text-gray-700 hover:text-gray-900 transition-colors">
-              Trang chủ</Link>
+              Home
+            </Link>
             <Link href="/events" className="text-gray-700 hover:text-gray-900 transition-colors">
-              Sự kiện</Link>
+              Events
+            </Link>
             <Link href="/members" className="text-gray-700 hover:text-gray-900 transition-colors">
-              Thành viên</Link>
+              Members
+            </Link>
             <Link href="/gallery" className="text-gray-700 hover:text-gray-900 transition-colors">
-              Bộ sưu tập ảnh</Link>
+              Gallery
+            </Link>
             <Link href="/about" className="text-gray-700 hover:text-gray-900 transition-colors">
-              Giới thiệu</Link>
+              About
+            </Link>
           </nav>
           <div className="flex items-center space-x-4">
             <a
               href="#"
               className="text-gray-700 hover:text-gray-900 transition-colors"
             >
-              Instagram</a>
+              Instagram
+            </a>
             <a
               href="#"
               className="text-gray-700 hover:text-gray-900 transition-colors"
             >
-              Facebook</a>
+              Facebook
+            </a>
             <a
               href="#"
               className="text-gray-700 hover:text-gray-900 transition-colors"
             >
-              YouTube</a>
+              YouTube
+            </a>
             <Link
               href="/events"
               className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"

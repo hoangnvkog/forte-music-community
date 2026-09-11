@@ -5,7 +5,8 @@ export default function JoinCommunity() {
     <section className="py-24 bg-indigo-50">
       <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
         <h2 className="mb-6 text-3xl font-bold text-gray-900">
-          Hãy chơi cùng chúng tôi.</h2>
+          Come play with us.
+        </h2>
         <p className="mb-8 max-w-2xl mx-auto text-lg text-gray-600">
           We welcome pianists and music lovers of all levels to join our community.
         </p>
@@ -13,7 +14,8 @@ export default function JoinCommunity() {
           href={joinUrl}
           className="inline-flex items-center px-8 py-4 bg-indigo-600 text-white font-medium rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors"
         >
-          THAM GIA FORTE MUSIC COMMUNITY</a>
+          JOIN FORTE MUSIC COMMUNITY
+        </a>
       </div>
     </section>
   );

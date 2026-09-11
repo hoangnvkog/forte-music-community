@@ -1,0 +1,147 @@
+#!/usr/bin/env python3
+import sys
+import os
+import re
+
+# Translation dictionary: English -> Vietnamese
+translations = {
+    # Common strings
+    "Forte is a community built around the love of Piano and music.": "Forte là một cộng đồng được xây dựng quanh tình yêu Piano và âm nhạc.",
+    "A community for people who love music and Piano.": "Một cộng đồng dành cho những người yêu âm nhạc và Piano.",
+    "JOIN THE COMMUNITY": "THAM GIA CỘNG ĐỒNG",
+    "EXPLORE EVENTS": "Khám phá sự kiện",
+    "Come play with us.": "Hãy chơi cùng chúng tôi.",
+    "JOIN FORTE MUSIC COMMUNITY": "THAM GIA FORTE MUSIC COMMUNITY",
+    "Upcoming Events": "Sự kiện sắp tới",
+    "Past Events": "Sự kiện đã qua",
+    "View Event": "Xem sự kiện",
+    "Meet Our Members": "Gặp gỡ thành viên của chúng tôi",
+    "View Profile": "Xem hồ sơ",
+    "Community Gallery": "Bộ sưu tập ảnh cộng đồng",
+    "View Gallery": "Xem bộ sưu tập ảnh",
+    "Welcome": "Chào mừng",
+    "Free Piano": "Piano tự do",
+    "Community Performance": "Bàn biểu diễn cộng đồng",
+    "Social": "Giao lưu",
+    "JOIN EVENT": "THAM GIA SỰ KIỆN",
+    "About Me": "Về tôi",
+    "Interests": "Sở thích",
+    "Favorite Artists": "Nhà izd yêu thích",
+    "Favorite Genres": "Thể loại yêu thích",
+    "Instagram": "Instagram",
+    "Facebook": "Facebook",
+    "YouTube": "YouTube",
+    "Joined:": "Tham gia từ:",
+    "Piano Level:": "Trình độ Piano:",
+    "Our Story": "Câu chuyện của chúng tôi",
+    "What We Do": "Chúng tôi làm gì",
+    "Our Values": "Giá trị của chúng tôi",
+    "Piano Gatherings": "Buổi họp Piano",
+    "Music Sharing Sessions": "Buổi chia sẻ âm nhạc",
+    "Workshops": "Workshop",
+    "Community Performances": "Bàn biểu diễn cộng đồng",
+    "Meetups": "Buổi gặp gỡ",
+    "Love Music": "Yêu âm nhạc",
+    "Share Knowledge": "Chia sẻ kiến thức",
+    "Encourage One Another": "Khuyến khích lẫn nhau",
+    "Create Meaningful Connections": "Tạo ra những kết nối có ý nghĩa",
+    "Demo Piano Gathering": "Buổi họp Piano mẫu",
+    "Demo Piano Workshop": "Workshop Piano mẫu",
+    "Community Meetup": "Họp cộng đồng",
+    "Piano Gathering #12": "Buổi họp Piano #12",
+    "Piano Night #11": "Đêm Piano #11",
+    "Workshop #10": "Workshop #10",
+    "Regular meetups where members play piano, share pieces, and enjoy music together.": "Các buổi họp thường lệ nơi các thành viên chơi piano, chia sẻ các triển tub và cùng nhau tận hưởng âm nhạc.",
+    "Informal gatherings to listen to and discuss piano music and performances.": "Buổi họp non formal để lắng nghe và thảo luận về âm nhạc piano và các buổi biểu diễn.",
+    "Educational sessions on piano technique, music theory, and performance practice.": "Các buổi học về kỹ thuật piano, lý thuyết âm nhạc và thực hành biểu diễn.",
+    "Opportunities for members to perform in a supportive environment.": "Cơ hội cho các thành viên biểu diễn trong một môi trường hỗ trợ.",
+    "Social events to build connections and friendships through music.": "Các sự kiện xã hội để xây dựng kết nối và tình bạn qua âm nhạc.",
+    "We share a deep appreciation for piano music and the joy it brings.": "Chúng tôi chia sẻ sự trân trọng sâu sắc đối với âm nhạc piano và niềm pleasure nó mang lại.",
+    "We believe in learning from each other and growing together.": "Chúng tôi tin rằng chúng ta học hỏi lẫn nhau và cùng nhau phát triển.",
+    "We create a supportive environment where everyone feels welcome to share their musical journey.": "Chúng tôi tạo ra một môi trường hỗ trợ nơi mọi người cảm thấy được chào đón để chia sẻ hành trình âm nhạc của mình.",
+    "We foster lasting friendships and connections through our shared passion for music.": "Chúng tôi thúc đẩy các mối quan hệ bạn bè và kết nối bền vỏ thông qua đam mê chung cho âm nhạc.",
+    "All rights reserved.": "Bảo lưu tất cả quyền.",
+    "Home": "Trang chủ",
+    "Events": "Sự kiện",
+    "Members": "Thành viên",
+    "Gallery": "Bộ sưu tập ảnh",
+    "About": "Giới thiệu",
+}
+
+def translate_outside(text):
+    # We'll track whether we are inside a string or inside curly braces.
+    # We assume the text does not contain newline for simplicity, but we can handle it.
+    result = []
+    i = 0
+    n = len(text)
+    in_string = False
+    string_char = None
+    brace_count = 0
+    while i < n:
+        ch = text[i]
+        if not in_string and ch == '{':
+            brace_count += 1
+            result.append(ch)
+            i += 1
+        elif not in_string and ch == '}':
+            if brace_count > 0:
+                brace_count -= 1
+            result.append(ch)
+            i += 1
+        elif ch == '"' or ch == "'" or ch == '`':
+            if not in_string:
+                in_string = True
+                string_char = ch
+            elif in_string and ch == string_char:
+                # Check if it's escaped
+                # We'll assume it's not escaped for simplicity, but we can check the previous character.
+                # If the previous character is a backslash and it's not itself escaped, then it's escaped.
+                # We'll keep it simple and just toggle.
+                in_string = False
+                string_char = None
+            result.append(ch)
+            i += 1
+        elif in_string:
+            # Inside a string, just copy
+            result.append(ch)
+            i += 1
+            # Handle escape sequences: if we see a backslash, skip the next character
+            if ch == '\\':
+                if i < n:
+                    result.append(text[i])
+                    i += 2
+                else:
+                    i += 1
+        else:
+            # Outside of strings and braces: we can translate.
+            # But we want to translate in chunks. We'll accumulate until we hit a brace or quote.
+            start = i
+            while i < n and text[i] not in ('{', '}', '"', "'", "`") and not (text[i] == '\\' and i+1 < n and text[i+1] in ('"', "'", "`")):
+                i += 1
+            segment = text[start:i]
+            # Translate the segment
+            for eng, vie in translations.items():
+                segment = segment.replace(eng, vie)
+            result.append(segment)
+    return ''.join(result)
+
+def translate_file(filepath):
+    with open(filepath, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    new_content = translate_outside(content)
+    
+    if new_content != content:
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(new_content)
+        print(f"Translated: {filepath}")
+        return True
+    else:
+        print(f"No changes: {filepath}")
+        return False
+
+if __name__ == '__main__':
+    if len(sys.argv) < 2:
+        print("Usage: python translate_file2.py <filepath>")
+        sys.exit(1)
+    translate_file(sys.argv[1])

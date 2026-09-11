@@ -77,7 +77,8 @@ export default function EventDetailPage({ params }: { params: { slug: string } }
               href={event.registrationUrl}
               className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white font-medium rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors"
             >
-              THAM GIA SỰ KIỆN</a>
+              JOIN EVENT
+            </a>
           </div>
 
           {/* Back to Events Link */}

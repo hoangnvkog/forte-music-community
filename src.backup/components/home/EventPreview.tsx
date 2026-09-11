@@ -5,7 +5,8 @@ export default function EventPreview() {
     <section className="py-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <h2 className="mb-8 text-3xl font-bold text-gray-900 text-center">
-          Sự kiện sắp tới</h2>
+          Upcoming Events
+        </h2>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {/* Event Card Placeholder */}
           <div className="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow">
@@ -14,7 +15,8 @@ export default function EventPreview() {
             </div>
             <div className="p-6">
               <h3 className="mb-2 text-xl font-semibold text-gray-900">
-                Buổi họp Piano mẫu</h3>
+                Demo Piano Gathering
+              </h3>
               <p className="mb-4 text-sm text-gray-500">
                 Sep 15, 2026 · 7:00 PM · Community Hall
               </p>
@@ -25,7 +27,8 @@ export default function EventPreview() {
                 href="/events/demo-piano-gathering"
                 className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
-                Xem sự kiện</Link>
+                View Event
+              </Link>
             </div>
           </div>
           {/* Second Event Card Placeholder */}
@@ -46,7 +49,8 @@ export default function EventPreview() {
                 href="/events/demo-piano-workshop"
                 className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
-                Xem sự kiện</Link>
+                View Event
+              </Link>
             </div>
           </div>
           {/* Third Event Card Placeholder */}
@@ -67,7 +71,8 @@ export default function EventPreview() {
                 href="/events/community-meetup"
                 className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
-                Xem sự kiện</Link>
+                View Event
+              </Link>
             </div>
           </div>
         </div>

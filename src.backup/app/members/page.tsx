@@ -6,7 +6,8 @@ export default function MembersPage() {
     <section className="py-24">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <h2 className="mb-8 text-3xl font-bold text-gray-900">
-          Thành viên</h2>
+          Members
+        </h2>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <MemberCard />
           <MemberCard />

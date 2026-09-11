@@ -20,18 +20,21 @@ export default function Hero() {
           FORTE MUSIC COMMUNITY
         </h1>
         <p className="mb-8 max-w-2xl mx-auto text-lg text-gray-600">
-          Một cộng đồng dành cho những người yêu âm nhạc và Piano.</p>
+          A community for people who love music and Piano.
+        </p>
         <div className="flex flex-col sm:flex-row sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4">
           <a
             href="#"
             className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white font-medium rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors"
           >
-            THAM GIA CỘNG ĐỒNG</a>
+            JOIN THE COMMUNITY
+          </a>
           <Link
             href="/events"
             className="inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-colors"
           >
-            Khám phá sự kiện</Link>
+            EXPLORE EVENTS
+          </Link>
         </div>
       </div>
     </section>

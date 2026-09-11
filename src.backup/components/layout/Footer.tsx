@@ -16,23 +16,30 @@ export default function Footer() {
               <span className="text-sm font-medium text-gray-600">MUSIC COMMUNITY</span>
             </div>
             <p className="text-gray-600">
-              Một cộng đồng dành cho những người yêu Piano, âm nhạc và những kết nối có ý nghĩa.</p>
+              A community for people who love Piano, music and meaningful connections.
+            </p>
             <div className="flex flex-col lg:flex-row lg:items-start lg:space-x-8 gap-4">
               <Link href="/" className="text-gray-700 hover:text-gray-900 transition-colors">
-                Trang chủ</Link>
+                Home
+              </Link>
               <Link href="/events" className="text-gray-700 hover:text-gray-900 transition-colors">
-                Sự kiện</Link>
+                Events
+              </Link>
               <Link href="/members" className="text-gray-700 hover:text-gray-900 transition-colors">
-                Thành viên</Link>
+                Members
+              </Link>
               <Link href="/gallery" className="text-gray-700 hover:text-gray-900 transition-colors">
-                Bộ sưu tập ảnh</Link>
+                Gallery
+              </Link>
               <Link href="/about" className="text-gray-700 hover:text-gray-900 transition-colors">
-                Giới thiệu</Link>
+                About
+              </Link>
             </div>
           </div>
           <div className="space-y-4 text-center lg:text-left">
             <h3 className="mb-2 text-lg font-medium text-gray-900">
-              Giao lưu</h3>
+              Social
+            </h3>
             <div className="flex flex-col lg:flex-row lg:items-start lg:space-x-6 gap-4">
               <a
                 href={instagramUrl}
@@ -40,21 +47,24 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Instagram</a>
+                Instagram
+              </a>
               <a
                 href={facebookUrl}
                 className="text-gray-600 hover:text-gray-900 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Facebook</a>
+                Facebook
+              </a>
               <a
                 href={youtubeUrl}
                 className="text-gray-600 hover:text-gray-900 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                YouTube</a>
+                YouTube
+              </a>
             </div>
           </div>
         </div>
