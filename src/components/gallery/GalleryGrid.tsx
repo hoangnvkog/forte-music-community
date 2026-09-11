@@ -44,31 +44,45 @@ export default function GalleryGrid() {
   ];
 
   return (
-    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4"
-      >
-      {galleryItems.map((item) => (
-        <Link
-          key={item.id}
-          href={`/gallery/${item.id}`}
-          className="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow"
-        >
-          <div className="h-48 bg-gray-200">
-            {/* Placeholder for gallery image */}
-            <Image
-              src={item.imageUrl}
-              alt={item.title}
-              fill
-              style={{ objectFit: 'cover' }}
-            />
-          </div>
-          <div className="p-4">
-            <h3 className="mb-2 text-lg font-semibold text-gray-900">
-              {item.title}
-            </h3>
-            <p className="text-sm text-gray-500">{item.date}</p>
-          </div>
-        </Link>
-      ))}
-    </div>
+    <section className="bg-ivory">
+      <div className="container mx-auto px-6 lg:px-8">
+        <h2 className="mb-12 text-4xl font-cormorant text-charcoal text-center">
+          Bộ sưu tập ảnh cộng đồng
+        </h2>
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {galleryItems.map((item) => (
+            <Link
+              key={item.id}
+              href={`/gallery/${item.id}`}
+              className="border border-soft-border rounded-sm overflow-hidden hover-scale transition-transform duration-300"
+            >
+              <div className="relative h-48 bg-gray-200">
+                {/* Placeholder for gallery image */}
+                <Image
+                  src={item.imageUrl}
+                  alt={item.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="mb-2 text-lg font-semibold text-charcoal">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-charcoal/600">{item.date}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+        <div className="mt-12 text-center">
+          <Link
+            href="/gallery"
+            className="outline-button outline-button-lg hover:bg-champagne-gold hover:text-ivory"
+          >
+            XEM BỘ SỮP TẬP ẢNH
+          </Link>
+        </div>
+      </div>
+    </section>
   );
 }

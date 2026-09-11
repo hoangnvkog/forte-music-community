@@ -1,9 +1,10 @@
 export default function IntroSection() {
   return (
-    <section className="py-24">
-      <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-        <p className="text-xl text-gray-700">
-          Forte Music Community gathers những người yêu Piano, âm nhạc và trải nghiệm chia sẻ âm nhạc với nhau.</p>
+    <section className="section-spacing">
+      <div className="container mx-auto text-center">
+        <p className="lead text-charcoal/80 max-w-2xl mx-auto">
+          Forte Music Community gathers những người yêu Piano, âm nhạc và trải nghiệm chia sẻ âm nhạc với nhau.
+        </p>
       </div>
     </section>
   );

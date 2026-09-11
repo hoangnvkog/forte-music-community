@@ -12,7 +12,7 @@ export default function EventCard({ isUpcoming = true }: EventCardProps) {
     location: 'Community Hall',
     coverImageUrl: '/placeholder-event.jpg',
     description: 'Join us for an evening of piano music and community connection.',
-    status: 'Upcoming'
+    status: 'Sắp tới'
   } : {
     title: 'Demo Piano Workshop',
     date: 'Aug 20, 2026',
@@ -20,28 +20,35 @@ export default function EventCard({ isUpcoming = true }: EventCardProps) {
     location: 'Music Studio',
     coverImageUrl: '/placeholder-event.jpg',
     description: 'Learn new techniques and share your piano journey with others.',
-    status: 'Past'
+    status: 'Đã qua'
   };
 
   return (
-    <Link href={`/events/${event.title.toLowerCase().replace(/\s+/g, '-')}`} className="bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition-shadow">
-      <div className="h-48 bg-gray-200">
+    <Link 
+      href={`/events/${event.title.toLowerCase().replace(/\s+/g, '-')}`} 
+      className="border border-soft-border rounded-sm overflow-hidden hover-scale transition-transform duration-300"
+    >
+      <div className="relative h-48 bg-gray-200">
         {/* Placeholder for event image */}
       </div>
       <div className="p-6">
         <div className="flex items-center space-x-3 mb-2">
-          <span className={`px-2 py-1 text-xs font-medium rounded-full ${isUpcoming ? 'bg-indigo-100 text-indigo-800' : 'bg-gray-100 text-gray-800'}`}>
+          <span className={`px-2 py-1 text-xs font-medium rounded-full ${isUpcoming ? 'bg-champagne-gold/20 text-champagne-gold' : 'bg-charcoal/10 text-charcoal'}`}>
             {event.status}
           </span>
-          <span className="text-xs text-gray-500">{event.date}</span>
+          <span className="text-xs text-charcoal/600">{event.date}</span>
         </div>
-        <h3 className="mb-2 text-xl font-semibold text-gray-900">{event.title}</h3>
-        <p className="mb-4 text-sm text-gray-500">
+        <h3 className="mb-3 text-2xl font-cormorant text-charcoal">{event.title}</h3>
+        <p className="mb-4 text-sm text-charcoal/600">
           {event.time} · {event.location}
         </p>
-        <p className="mb-6 text-gray-600">{event.description}</p>
-        <div className="flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-          Xem sự kiện</div>
+        <p className="mb-5 text-base text-charcoal/80">{event.description}</p>
+        <Link
+          href={`/events/${event.title.toLowerCase().replace(/\s+/g, '-')}`}
+          className="inline-flex items-center outline-button outline-button-sm hover:bg-champagne-gold hover:text-ivory"
+        >
+          Xem sự kiện
+        </Link>
       </div>
     </Link>
   );

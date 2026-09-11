@@ -3,35 +3,41 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className="relative bg-gray-50 py-24">
+    <section className="bg-ivory">
       <div className="absolute inset-0">
         {/* Placeholder for a piano/music related image */}
         <Image
           src="/placeholder-hero.jpg"
           alt="Piano keys"
           fill
-          className="opacity-20"
+          className="opacity-10"
           style={{ objectFit: 'cover', objectPosition: 'center' }}
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-gray-50 to-white opacity-30" />
       </div>
-      <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
-        <h1 className="mb-6 text-4xl font-bold text-gray-900 sm:text-5xl">
+      <div className="container mx-auto px-6 lg:px-8 py-24 text-center">
+        <p className="text-xs font-inter uppercase tracking-wider text-champagne-gold">
           FORTE MUSIC COMMUNITY
+        </p>
+        <h1 className="mt-4 text-5xl font-cormorant text-charcoal">
+          WHERE MUSIC<br className="hidden sm:inline-block" />
+          BRINGS US TOGETHER.
         </h1>
-        <p className="mb-8 max-w-2xl mx-auto text-lg text-gray-600">
-          Một cộng đồng dành cho những người yêu âm nhạc và Piano.</p>
-        <div className="flex flex-col sm:flex-row sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-          <a
-            href="#"
-            className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white font-medium rounded-md shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors"
+        <p className="mt-6 text-lg text-charcoal/80 max-w-2xl mx-auto">
+          A community for people who love Piano, music and meaningful connections.
+        </p>
+        <div className="mt-8 flex flex-col sm:flex-row sm:justify-center sm:space-x-4">
+          <Link
+            href="/"
+            className="outline-button outline-button-lg hover:bg-champagne-gold hover:text-ivory"
           >
-            THAM GIA CỘNG ĐỒNG</a>
+            THAM GIA CỘNG ĐỒNG
+          </Link>
           <Link
             href="/events"
-            className="inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-colors"
+            className="outline-button outline-button-lg hover:bg-champagne-gold hover:text-ivory"
           >
-            Khám phá sự kiện</Link>
+            Khám phá sự kiện
+          </Link>
         </div>
       </div>
     </section>

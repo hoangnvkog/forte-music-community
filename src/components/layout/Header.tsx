@@ -1,49 +1,43 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Header() {
   return (
-    <header className="border-b border-gray-200 bg-white/90 backdrop-blur-sm">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <header className="border-b border-soft-border bg-warm-white">
+      <div className="container mx-auto px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
-          <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center space-x-3">
-              <span className="text-2xl font-bold text-gray-900">FORTE</span>
-              <span className="text-sm font-medium text-gray-600">MUSIC COMMUNITY</span>
+          {/* Logo */}
+          <div className="flex-shrink-0 flex items-center space-x-3">
+            <Link href="/" className="flex items-center space-x-2">
+              <Image
+                src="/images/brand/forte-logo.svg"
+                alt="Forte Music Community Logo"
+                width={32}
+                height={32}
+                priority
+              />
+              <span className="text-2xl font-bold text-charcoal tracking-wider">
+                FORTE
+              </span>
             </Link>
           </div>
-          <nav className="hidden md:flex space-x-8">
-            <Link href="/" className="text-gray-700 hover:text-gray-900 transition-colors">
-              Trang chủ</Link>
-            <Link href="/events" className="text-gray-700 hover:text-gray-900 transition-colors">
-              Sự kiện</Link>
-            <Link href="/members" className="text-gray-700 hover:text-gray-900 transition-colors">
-              Thành viên</Link>
-            <Link href="/gallery" className="text-gray-700 hover:text-gray-900 transition-colors">
-              Bộ sưu tập ảnh</Link>
-            <Link href="/about" className="text-gray-700 hover:text-gray-900 transition-colors">
-              Giới thiệu</Link>
+
+          {/* Navigation */}
+          <nav className="hidden md:flex space-x-8 text-sm font-medium text-charcoal/700 hover:text-charcoal transition-colors">
+            <Link href="/" className="hover:text-charcoal">Trang chủ</Link>
+            <Link href="/events" className="hover:text-charcoal">Sự kiện</Link>
+            <Link href="/members" className="hover:text-charcoal">Thành viên</Link>
+            <Link href="/gallery" className="hover:text-charcoal">Bộ sưu tập ảnh</Link>
+            <Link href="/about" className="hover:text-charcoal">Giới thiệu</Link>
           </nav>
-          <div className="flex items-center space-x-4">
-            <a
-              href="#"
-              className="text-gray-700 hover:text-gray-900 transition-colors"
-            >
-              Instagram</a>
-            <a
-              href="#"
-              className="text-gray-700 hover:text-gray-900 transition-colors"
-            >
-              Facebook</a>
-            <a
-              href="#"
-              className="text-gray-700 hover:text-gray-900 transition-colors"
-            >
-              YouTube</a>
+
+          {/* CTA Button */}
+          <div className="flex-shrink-0">
             <Link
               href="/events"
-              className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              className="outline-button outline-button-lg hover:bg-champagne-gold hover:text-ivory"
             >
-              Join Community
+              THAM GIA CỘNG ĐỒNG
             </Link>
           </div>
         </div>
