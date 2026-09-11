@@ -10,10 +10,10 @@ export default function Header() {
           <div className="flex-shrink-0 flex items-center space-x-3">
             <Link href="/" className="flex items-center space-x-2">
               <Image
-                src="/images/brand/forte-logo.svg"
+                src="/images/brand/forte-logo.png"
                 alt="Forte Music Community Logo"
-                width={32}
-                height={32}
+                width={40}
+                height={40}
                 priority
               />
               <span className="text-2xl font-bold text-charcoal tracking-wider">

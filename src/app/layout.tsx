@@ -9,6 +9,12 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Forte Music Community',
   description: 'A community for people who love Piano, music and meaningful connections.',
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16.png',
+    apple: '/apple-touch-icon.png',
+  },
+  manifest: '/site.webmanifest',
 };
 
 export default function RootLayout({
@@ -17,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="vi">
       <body className={inter.className}>{' '}
         <Header />
         <main>{children}</main>

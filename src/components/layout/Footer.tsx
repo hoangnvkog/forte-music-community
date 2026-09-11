@@ -14,10 +14,10 @@ export default function Footer() {
           <div className="space-y-4 text-center lg:text-left">
             <div className="flex items-center space-x-3">
               <Image
-                src="/images/brand/forte-logo.svg"
+                src="/images/brand/forte-logo.png"
                 alt="Forte Music Community Logo"
-                width={24}
-                height={24}
+                width={32}
+                height={32}
                 priority
               />
               <span className="text-2xl font-bold text-ivory tracking-wider">
