@@ -1,5 +1,6 @@
 import { events } from '@/data/events';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function EventPreview() {
   // Show only the first two events as a teaser
