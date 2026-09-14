@@ -3,43 +3,33 @@ import Image from 'next/image';
 
 export default function Header() {
   return (
-    <header className="border-b border-soft-border bg-warm-white">
-      <div className="container mx-auto px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+    <header className="">
+      <div className="container mx-auto px-6">
+        <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center space-x-3">
             <Link href="/" className="flex items-center space-x-2">
               <Image
                 src="/images/brand/forte-logo.png"
                 alt="Forte Music Community Logo"
-                width={40}
-                height={40}
+                width={36}
+                height={36}
                 priority
               />
-              <span className="text-2xl font-bold text-charcoal tracking-wider">
+              <span className="text-2xl font-bold text-charcoal-medium tracking-wider">
                 FORTE
               </span>
             </Link>
           </div>
 
           {/* Navigation */}
-          <nav className="hidden md:flex space-x-8 text-sm font-medium text-charcoal/700 hover:text-charcoal transition-colors">
-            <Link href="/" className="hover:text-charcoal">Trang chủ</Link>
-            <Link href="/events" className="hover:text-charcoal">Sự kiện</Link>
-            <Link href="/members" className="hover:text-charcoal">Thành viên</Link>
-            <Link href="/gallery" className="hover:text-charcoal">Bộ sưu tập ảnh</Link>
-            <Link href="/about" className="hover:text-charcoal">Giới thiệu</Link>
+          <nav className="hidden md:flex space-x-8 text-base font-medium">
+            <Link href="/" className="nav-link">Trang chủ</Link>
+            <Link href="/events" className="nav-link">Sự kiện</Link>
+            <Link href="/members" className="nav-link">Thành viên</Link>
+            <Link href="/gallery" className="nav-link">Bộ sưu tập ảnh</Link>
+            <Link href="/about" className="nav-link">Giới thiệu</Link>
           </nav>
-
-          {/* CTA Button */}
-          <div className="flex-shrink-0">
-            <Link
-              href="/events"
-              className="outline-button outline-button-lg hover:bg-champagne-gold hover:text-ivory"
-            >
-              THAM GIA CỘNG ĐỒNG
-            </Link>
-          </div>
         </div>
       </div>
     </header>

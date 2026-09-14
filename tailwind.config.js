@@ -9,7 +9,11 @@ module.exports = {
       colors: {
         ivory: '#F8F3E8',
         'warm-white': '#FFFDF8',
-        charcoal: '#292722',
+        charcoal: {
+          40: 'rgba(41, 39, 34, 0.4)',
+          60: 'rgba(41, 39, 34, 0.6)',
+          80: 'rgba(41, 39, 34, 0.8)',
+        },
         'champagne-gold': '#C89A4B',
         'dark-gold': '#8F6328',
         'soft-border': '#E8DFCF',
